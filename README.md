@@ -1,32 +1,64 @@
-# Build An Album Store Product Page With Angular
+# Angular JumpStart with TypeScript
 
-This repo contains the code for the Pluralsight Project "Build An Album Store Product Page With Angular," located here: https://app.pluralsight.com/projects/build-an-album-store-product-page-with-angular/
+The goal of this jumpstart app is to provide
+a simple way to get started with Angular 2+ while also showing several key Angular features. The sample
+relies on the Angular CLI to build the application.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+Looking for expert onsite Angular/TypeScript training? We've trained the biggest (and smallest :-)) companies around the world for over 15 years. For more information visit https://codewithdan.com.
 
-## Development server
+## Angular Concepts Covered
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* TypeScript version that relies on classes and modules
+* Modules are loaded with System.js
+* Defining routes including child routes and lazy loaded routes
+* Using Custom Components including custom input and output properties
+* Using Custom Directives
+* Using Custom Pipes
+* Defining Properties and Using Events in Components/Directives
+* Using the Http object for Ajax calls along with RxJS observables
+* Working with Utility and Service classes (such as for sorting and Ajax calls)
+* Using Angular databinding Syntax [], () and [()]
+* Using template-driven and reactive forms functionality for capturing and validating data
+* Optional: Webpack functionality is available for module loading and more (see below for details)
+* Optional: Ahead-of-Time (AOT) functionality is available for a production build of the project (see below for details)
 
-## Code scaffolding
+## Running the Application
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+1. Install `Node.js 8.9` or higher. *IMPORTANT: The server uses ES2015 features AND the Angular CLI so you need this versin of Node.js!!!!*
 
-## Build
+1. Run `npm install` to install app dependencies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+1. Run `ng build --watch` to build and bundle the code
 
-## Running unit tests
+1. Run `npm start` in a separate terminal window to build the TypeScript, watch for changes and launch the web server
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Go to http://localhost:3000 in your browser 
 
-We've also created scripts that correspond to each part of the Pluralsight Project that you can access by running `npm run test:partN`, where `N` is any number 2-7.
+Simply clone the project or download and extract the .zip to get started. 
 
-## Running end-to-end tests
+Once the app is running you can play around with editing customers after you login. Use any email address and any password that's at least 6 characters long (with 1 digit).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+Here are a few screenshots from the app:
 
-## Further help
+<img width="500" src="src/assets/images/screenshots/cards.png" border="0" />
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<br /><br />
+
+<img width="500" src="src/assets/images/screenshots/grid.png" border="0" />
+
+<br /><br />
+
+<img width="500" src="src/assets/images/screenshots/orders.png" border="0" />
+
+<br /><br />
+
+<img width="500" src="src/assets/images/screenshots/details.png" border="0" />
+
+## Running Angular Playground
+
+This application includes Angular Playground (http://www.angularplayground.it) which provides a great way to isolate components in a sandbox rather than loading the 
+entire application to see a given component. To run the playground run the following command:
+
+`npm run playground`
+
+
