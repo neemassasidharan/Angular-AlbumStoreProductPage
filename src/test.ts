@@ -12,13 +12,9 @@ import {
   platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
 
-// Load this module so we can use the since() matcher
-require('jasmine2-custom-message');
-
 // Unfortunately there's no typing for the `__karma__` variable. Just declare it as any.
-declare var __karma__: any;
-declare var require: any;
-const part = __karma__.config.args[0];
+declare const __karma__: any;
+declare const require: any;
 
 // Prevent Karma from running prematurely.
 __karma__.loaded = function () {};
@@ -28,15 +24,9 @@ getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting()
 );
-
-// load all tests, and then filter into specFiles array if the test path matches the `part#` passed in as an argument into the variable `part`
-const context = require.context('./', true, /projects\.spec\.ts/)
-let specFiles = context.keys().filter((path) => {
-  let filterRegExp = (part) ? new RegExp(part, 'g') : /projects\.spec\.ts/g
-  return filterRegExp.test(path)
-})
-
-// and load the modules.
-specFiles.map(context)
-// finally, start Karma to run the tests.
+// Then we find all the tests.
+const context = require.context('./', true, /\.spec\.ts$/);
+// And load the modules.
+context.keys().map(context);
+// Finally, start Karma to run the tests.
 __karma__.start();
